@@ -1,0 +1,113 @@
+<html>
+<head>
+<script>
+function validateForm() 
+{
+    var x = document.forms["form2"]["name"].value;
+    if (x == null || x == "") {
+        alert("Name must be filled out");
+        return false;
+    } 
+}
+function phone()
+  { 
+var unum=document.form2.contact_no;  
+var numbers = /^[0-9]+$/;  
+if(unum.value.match(numbers))  
+{  
+return true;  
+}  
+else  
+{  
+alert('Phone number must have numeric characters only');    
+return false;
+   }
+  }
+function age1()
+  { 
+var num=document.form2.age;  
+var number = /^[0-9]+$/;  
+if(num.value.match(number))  
+{  
+return true;  
+}  
+else  
+{  
+alert('age must have numeric characters only');    
+return false;
+   }
+  }
+function gender1()
+{
+	var unum=document.form2.gender;  
+	var numbers = /^[a-z][A-Z]+$/;  
+	if(unum.value.match(numbers))  
+	{  
+		return true;  
+	}  
+	else  
+	{  
+		alert('Gender must have Alphabets only');    
+		return false;
+	}
+}
+function address1()
+{
+	var unum=document.form2.address;  
+	var numbers = /^[0-9][a-z][A-Z]+$/;  
+	if(unum.value.match(numbers))  
+	{  
+		return true;  
+	}  
+	else  
+	{  
+		alert('Address must have AlphaNumeric characters only');    
+		return false;
+	}
+}
+function room1()
+{
+	var unum=document.form2.room_no;  
+	var numbers = /^[0-9]+$/;  
+	if(unum.value.match(numbers))  
+	{  
+		return true;  
+	}  
+	else  
+	{  
+		alert('Room Number must have numeric characters only');    
+		return false;
+	}
+}
+</script>
+</head>
+<body background="C:\Users\Hp\Desktop\New folder (2)\bg1.png">
+<h1><font color="#191970" style="Viner Hand ITC">
+<center>INPATIENT  REGISTRATION</Font></h1>
+<br>
+<br>
+
+<form name="form2" action="inpatientadd.php" method="POST" onsubmit="return validateForm(),phone(),age1(),gender1(),address1(),room1()">
+Patient Id&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="text"  name="patient_no">
+<br><br>
+Name&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="text"  name="name">
+<br><br>
+Age&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <input type="text"  name="age">
+<br><br>
+Gender&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="text"  name="gender">
+<br><br>
+Address&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <input type="text"  name="address">
+<br ><br>
+Contact no&nbsp&nbsp&nbsp&nbsp&nbsp <input type="text"  name="contact_no">
+<br><br>
+Reg date&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="text"  name="date">
+<br><br>
+Room no.&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <input type="text"  name="room_no">
+<br><br>
+<input type="submit" value='Add'>&nbsp&nbsp
+<input type="button" value='Delete'>&nbsp&nbsp
+<input type="button" value='Search'>&nbsp&nbsp
+<input type="button" value='Close'>&nbsp&nbsp
+
+</body>
+</html>
